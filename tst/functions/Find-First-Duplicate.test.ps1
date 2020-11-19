@@ -21,4 +21,8 @@ Describe 'Find-First-Recurring-Character' {
         $firstRecurringCharacter = Find-First-Recurring-Character '`1234567890-=qwertyuiop[]\asdfghjkl;zxcvbnm,./<>?!@#$%^&*(_+|}{{'
         $firstRecurringCharacter | Should Be '{'
     }
+    It "Given string 'ab  cdedcba' returns ' ' " {
+        $firstRecurringCharacter = Find-First-Recurring-Character 'ab  cdedcba'
+        $firstRecurringCharacter | Should Be ' '
+    }
 }
